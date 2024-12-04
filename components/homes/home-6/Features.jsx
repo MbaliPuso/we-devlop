@@ -17,7 +17,7 @@ export default function Features() {
                 className="w-100"
               />
             </div>
-            <div className="small text-gray text-center">
+            {/* <div className="small text-gray text-center">
               Illustration by{" "}
               <a
                 href="https://icons8.com/illustrations/author/TQQ1qAnr9rn5"
@@ -35,7 +35,7 @@ export default function Features() {
                 Ouch
               </a>
               !
-            </div>
+            </div> */}
           </div>
         </div>
         {/* End Images */}
@@ -46,12 +46,11 @@ export default function Features() {
               Why Choose Us?
             </h2>
             <h3 className="section-title-small mb-30">
-              We use the power of design to solve complex problems.
+            Crafting unforgettable brand solutions.
             </h3>
             <p className="section-descr mb-30">
-              There are two primary jobs involved in creating a website the web
-              designer and web developer, who often work closely together on a
-              website.
+              Websites come to life through the perfect blend of design and
+              development expertise.
             </p>
             {/* Features List */}
             <div className="row features-list">

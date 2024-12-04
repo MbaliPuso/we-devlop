@@ -3,13 +3,10 @@ import About from "./About";
 import Service from "./Service";
 import Features from "./Features";
 import Portfolio from "./Portfolio";
-import Testimonials from "./Testimonials";
 import Blog from "./Blog";
 import Newsletter from "./Newsletter";
-import Pricing from "./Pricing";
 import Contact from "./Contact";
 import Link from "next/link";
-import TestimonialsDark from "./TestimonialsDark";
 
 export default function Home6({ onePage = false, dark = false }) {
   return (
@@ -26,16 +23,13 @@ export default function Home6({ onePage = false, dark = false }) {
             <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
               <h2 className="section-caption-fancy mb-20 mb-xs-10">About Us</h2>
               <h3 className="section-title mb-30 mb-xs-20 wow fadeInUp">
-                The best way to create stanning layouts for your website.
+              Transform Your Ideas into Stunning Digital Experiences
               </h3>
               <p
                 className="section-descr mb-40 mb-sm-20 wow fadeInUp"
                 data-wow-delay="0.06s"
               >
-                Although web design has a fairly recent history. It has become a
-                large part of people's everyday lives. It is hard to imagine the
-                Internet without animated graphics, different styles of
-                typography, background, videos and music.
+                Modern web design is more than just visuals—it's about creating seamless, engaging, and functional experiences that captivate users. From dynamic layouts to interactive elements, every detail is crafted to leave a lasting impression and elevate your online presence.
               </p>
               <div className="local-scroll wow fadeInUp" data-wow-delay="0.12s">
                 {onePage ? (

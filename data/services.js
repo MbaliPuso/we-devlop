@@ -107,22 +107,22 @@ export const services3 = [
   {
     src: "/assets/images/demo-fancy/services/service-1.png",
     title: "Branding",
-    text: "A type of marketing agency, group or a firm which specializes in creating brands, people and their careers marketed as brands.",
+    text: "We posses the art of turning businesses, people, and ideas into unforgettable identities that stand out and leave a mark.",
   },
   {
     src: "/assets/images/demo-fancy/services/service-2.png",
     title: "Web Design",
-    text: "A static website stores a unique file for every page of a static website. Each time that page is requested, the same content is returned.",
+    text: "Where creativity meets functionality. It’s about building visually stunning and user-friendly websites that not only look great but work seamlessly.",
   },
   {
     src: "/assets/images/demo-fancy/services/service-3.png",
     title: "Development",
-    text: "There are three kinds of web developer specialization: front-end developer, back-end developer, and full-stack developer.",
+    text: "Building the digital world, one line of code at a time—whether it’s what you see, what works behind the scenes, or both.",
   },
   {
     src: "/assets/images/demo-fancy/services/service-4.png",
     title: "Marketing",
-    text: "Marketing refers to activities a company undertakes to promote the buying or selling of a product, service, or good.",
+    text: "The creative buzz that connects people to the products and services they’ll love. It’s about telling the right story, at the right time, in the right way.",
   },
 ];
 
