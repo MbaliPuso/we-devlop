@@ -7,8 +7,7 @@ import { fancyMultipage } from "@/data/menu";
 import Image from "next/image";
 import { allPortfolios } from "@/data/portfolio";
 export const metadata = {
-  title:
-    "Fancy Portfolio Single || Resonance &mdash; One & Multi Page React Nextjs Creative Template",
+  title: "Portfolio Details",
   description:
     "Resonance &mdash; One & Multi Page React Nextjs Creative Template",
 };
@@ -65,7 +64,7 @@ export default function FancyPortfolioSinglePage({ params }) {
                       className="section-descr mb-0 wow fadeIn"
                       data-wow-delay="0.2s"
                     >
-                      Branding, UI/UX Design, No-code Development
+                      UI/UX Design, Development
                     </p>
                   </div>
                 </div>
@@ -85,14 +84,14 @@ export default function FancyPortfolioSinglePage({ params }) {
                           <div className="col-sm-4">
                             <b>Date:</b>
                           </div>
-                          <div className="col-sm-8">May 1th, 2023</div>
+                          <div className="col-sm-8">October 21st, 2024</div>
                         </div>
                         <hr className="mb-20" />
                         <div className="row text-gray small">
                           <div className="col-sm-4">
                             <b>Client:</b>
                           </div>
-                          <div className="col-sm-8">Envato Users</div>
+                          <div className="col-sm-8">Suzuki Jimny Crew</div>
                         </div>
                         <hr className="mb-20" />
                         <div className="row text-gray small">
@@ -100,8 +99,17 @@ export default function FancyPortfolioSinglePage({ params }) {
                             <b>Services:</b>
                           </div>
                           <div className="col-sm-8">
-                            Branding, UI/UX Design, Front-end Development,
-                            Back-end Development
+                            Front-end Development, Back-end Development, UI/UX
+                            Design
+                          </div>
+                        </div>
+                        <hr className="mb-20" />
+                        <div className="row text-gray small">
+                          <div className="col-sm-4">
+                            <b>Tech Stack:</b>
+                          </div>
+                          <div className="col-sm-8">
+                            ReactJs Frontend Framework, PHP Backend Framework, MySQL database
                           </div>
                         </div>
                         <hr className="mb-20" />
@@ -110,10 +118,37 @@ export default function FancyPortfolioSinglePage({ params }) {
                             <b>Description:</b>
                           </div>
                           <div>
-                            Lorem ipsum dolor sit amet conseur adipisci inerene.
-                            Maecenas volutpat, diam eni sagittis quam porta
-                            quam. Sed id dolor consectetur fermentum volutpat
-                            accumsan purus iaculis libero.
+                            <ul>
+                              <li>
+                                The Jimny Crew website provides a seamless and
+                                user-friendly experience, allowing users to
+                                register and log in to access personalized
+                                features.
+                              </li>
+                              <li>
+                                Once logged in, users can update their profiles,
+                                ensuring their details are always up to date.
+                                The site makes it easy to explore and save
+                                events for future reference, book events with a
+                                straightforward process, and receive booking
+                                confirmation emails, which are sent to both the
+                                user and the admin for transparency.
+                              </li>
+                              <li>
+                                In case plans change, users can conveniently
+                                cancel their bookings directly through the
+                                platform.
+                              </li>
+                              <li>
+                                For added security and convenience, the website
+                                also includes a forgot password feature,
+                                enabling users to quickly reset their passwords
+                                and regain access.
+                              </li>
+                            </ul>
+                            Every aspect of the platform is designed to
+                              simplify event management and enhance user
+                              engagement.
                           </div>
                         </div>
                         <hr className="mb-20" />
@@ -125,7 +160,7 @@ export default function FancyPortfolioSinglePage({ params }) {
                         {/* Photo Item */}
                         <div className="mb-30 wow fadeInUp">
                           <Image
-                            src="/assets/images/demo-fancy/portfolio/project-3-large.jpg"
+                            src="/assets/images/demo-fancy/portfolio/project-3-large.png"
                             className="round"
                             loading="lazy"
                             width={1200}
@@ -137,7 +172,7 @@ export default function FancyPortfolioSinglePage({ params }) {
                         {/* Photo Item */}
                         <div className="mb-30 wow fadeInUp">
                           <Image
-                            src="/assets/images/demo-fancy/portfolio/project-5-large.jpg"
+                            src="/assets/images/demo-fancy/portfolio/project-5-large.png"
                             className="round"
                             loading="lazy"
                             width={1200}
