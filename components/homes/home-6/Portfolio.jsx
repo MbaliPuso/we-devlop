@@ -6,7 +6,6 @@ import Link from "next/link";
 import { Gallery, Item } from "react-photoswipe-gallery";
 const filters = [
   { name: "All works", category: "all" },
-  { name: "Branding", category: "branding" },
   { name: "Design", category: "design" },
   { name: "Development", category: "development" },
 ];
@@ -125,7 +124,7 @@ export default function Portfolio() {
         </ul>
         {/* End Works Grid */}
       </div>
-      <div className="small text-gray text-center mt-60 mt-sm-40">
+      {/* <div className="small text-gray text-center mt-60 mt-sm-40">
         Free Images by{" "}
         <a href="asylab.com" rel="noopener nofollow" target="_blank">
           asylab.com
@@ -139,7 +138,7 @@ export default function Portfolio() {
           freeui.design
         </a>
         .
-      </div>
+      </div> */}
     </>
   );
 }

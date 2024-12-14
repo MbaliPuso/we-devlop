@@ -52,7 +52,7 @@ export default function Hero1() {
                   >
                     <span>Discover now</span>
                   </a>{" "}
-                  <a
+                  {/* <a
                     onClick={() => setOpen(true)}
                     className="btn btn-mod btn-border-c btn-white-c btn-large btn-round mb-xs-10 lightbox mfp-iframe"
                     data-btn-animate="y"
@@ -73,7 +73,7 @@ export default function Hero1() {
                         How we work?
                       </span>
                     </span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

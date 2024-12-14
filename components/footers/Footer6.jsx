@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import FooterSocials from "./FooterSocials";
+// import FooterSocials from "./FooterSocials";
 import { footerLinks, navigationLinks } from "@/data/footer";
 
 export default function Footer6() {
@@ -21,18 +21,18 @@ export default function Footer6() {
             eget. Proin lacinia mortoc id odio vestibulum.
           </p>
           <div className="clearlinks">
-            <strong>T.</strong>
-            <a href="tel:+18376528800">+1 837 652 8800</a>
+            <strong>Cell: </strong>
+            <a href="tel:+18376528800">+27 79 899 8619</a>
           </div>
           <div className="clearlinks">
-            <strong>E.</strong>
-            <a href="mailto:ibthemes21@gmail.com">ibthemes21@gmail.com</a>
+            <strong>Email: </strong>
+            <a href="mailto:ibthemes21@gmail.com">mbalipuso@gmail.com</a>
           </div>
         </div>
         <div className="col-lg-7 offset-lg-2">
           <div className="row mt-n30">
             {/* Footer Widget */}
-            <div className="col-sm-4 mt-30">
+            <div className="col-sm-6 mt-30">
               <h3 className="fw-title">Company</h3>
               <ul className="fw-menu clearlist local-scroll">
                 {navigationLinks.map((elm, i) => (
@@ -44,15 +44,15 @@ export default function Footer6() {
             </div>
             {/* End Footer Widget */}
             {/* Footer Widget */}
-            <div className="col-sm-4 mt-30">
+            {/* <div className="col-sm-4 mt-30">
               <h3 className="fw-title">Social Media</h3>
               <ul className="fw-menu clearlist">
                 <FooterSocials />
               </ul>
-            </div>
+            </div> */}
             {/* End Footer Widget */}
             {/* Footer Widget */}
-            <div className="col-sm-4 mt-30">
+            <div className="col-sm-6 mt-30">
               <h3 className="fw-title">Legal &amp; Press</h3>
               <ul className="fw-menu clearlist">
                 {footerLinks.map((elm, i) => (
@@ -69,10 +69,10 @@ export default function Footer6() {
       {/* Footer Text */}
       <div className="row text-gray">
         <div className="col-md-4 col-lg-3">
-          <b>© IB-Themes {new Date().getFullYear()}.</b>
+          <b>© We Develop {new Date().getFullYear()}.</b>
         </div>
         <div className="col-md-7 offset-md-1 offset-lg-2 clearfix">
-          <b>Based in London, United Kingdom.</b>
+          <b>Based in Johannesburg, South Africa.</b>
           {/* Back to Top Link */}
           <div className="local-scroll float-end mt-n20 mt-sm-10">
             <a href="#top" className="link-to-top">

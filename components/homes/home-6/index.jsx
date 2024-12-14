@@ -3,8 +3,8 @@ import About from "./About";
 import Service from "./Service";
 import Features from "./Features";
 import Portfolio from "./Portfolio";
-import Blog from "./Blog";
-import Newsletter from "./Newsletter";
+// import Blog from "./Blog";
+// import Newsletter from "./Newsletter";
 import Contact from "./Contact";
 import Link from "next/link";
 
@@ -205,7 +205,7 @@ export default function Home6({ onePage = false, dark = false }) {
         </div>
       </section>
       <hr className={`mt-0 mb-0 ${dark ? "white" : ""}`} />
-      <section
+      {/* <section
         className={`page-section  scrollSpysection  ${
           dark ? "bg-dark-1 light-content" : ""
         } `}
@@ -214,9 +214,9 @@ export default function Home6({ onePage = false, dark = false }) {
         <Blog />
       </section>
 
-      <hr className={`mt-0 mb-0 ${dark ? "white" : ""}`} />
+      <hr className={`mt-0 mb-0 ${dark ? "white" : ""}`} /> */}
 
-      <section
+      {/* <section
         className={`page-section ${
           dark
             ? "bg-dark-1 bg-gradient-gray-dark-1 light-content"
@@ -225,7 +225,7 @@ export default function Home6({ onePage = false, dark = false }) {
       >
         <Newsletter />
       </section>
-      <hr className={`mt-0 mb-0 ${dark ? "white" : ""}`} />
+      <hr className={`mt-0 mb-0 ${dark ? "white" : ""}`} /> */}
       <section
         className={`page-section  scrollSpysection  ${
           dark ? "bg-dark-1 light-content" : ""

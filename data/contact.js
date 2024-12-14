@@ -2,7 +2,7 @@ export const contactItems = [
   {
     iconClass: "mi-location",
     title: "Address",
-    text: "Envato Pty Ltd, PO Box 16122 Collins Street, West Victoria.",
+    text: "Auckland Park, Johannesburg, South Africa",
     link: {
       url: "https://goo.gl/maps/7Vw1PBhxx5BaXStr8",
       text: "See Map",
@@ -13,18 +13,18 @@ export const contactItems = [
   {
     iconClass: "mi-email",
     title: "Email",
-    text: "ibthemes21@gmail.com",
+    text: "mbalipuso@gmail.com",
     link: {
-      url: "mailto:ibthemes21@gmail.com",
+      url: "mailto:mbalipuso@gmail.com",
       text: "Say Hello",
     },
   },
   {
     iconClass: "mi-mobile",
     title: "Phone",
-    text: "+1 837 652 8800",
+    text: "+27 79 899 8619",
     link: {
-      url: "tel:+61383767284",
+      url: "tel:+27798998619",
       text: "Call now",
     },
   },
