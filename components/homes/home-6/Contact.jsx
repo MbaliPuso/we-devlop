@@ -1,8 +1,65 @@
 "use client";
 import { contactItems } from "@/data/contact";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import { Modal } from "react-bootstrap";
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    contactNumber: "",
+    message: "",
+  });
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+     // Create a new FormData object
+     const formDataToSend = new FormData();
+
+     // Append text fields to FormData
+     for (const key in formData) {
+       formDataToSend.append(key, formData[key]);
+     }
+
+    try {
+      const response = await fetch(
+        "https://demos.kickass.co.za/finery/form/formHandler.php",
+        {
+          method: "POST",
+          body: formDataToSend,
+        }
+      );
+
+      if (response.ok) {
+        // Handle success, e.g., show a success message
+        setShowModal(true);
+        // You might want to redirect the user or display a success message
+      } else {
+        // Handle error, e.g., show an error message
+        setShowModal(false);
+      }
+    } catch (error) {
+      setShowModal(false);
+    }
+  };
+
+  const handleCloseModal = () => {
+      setShowModal(false);
+
+  };
+
   return (
     <div className="container position-relative">
       <div className="row">
@@ -84,7 +141,7 @@ export default function Contact() {
               <h4 className="h3 mb-30">Get in Touch</h4>
               {/* Contact Form */}
               <form
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={handleSubmit}
                 className="form contact-form"
                 id="contact_form"
               >
@@ -102,6 +159,8 @@ export default function Contact() {
                         pattern=".{3,100}"
                         required
                         aria-required="true"
+                        value={formData.name}
+                        onChange={handleChange}
                       />
                     </div>
                     {/* End Name */}
@@ -119,6 +178,8 @@ export default function Contact() {
                         pattern=".{5,100}"
                         required
                         aria-required="true"
+                        value={formData.email}
+                        onChange={handleChange}
                       />
                     </div>
                     {/* End Email */}
@@ -128,13 +189,15 @@ export default function Contact() {
                       <label htmlFor="contact">Contact Number</label>
                       <input
                         type="number"
-                        name="contact"
-                        id="contact"
+                        name="contactNumber"
+                        id="contactNumber"
                         className="input-lg round form-control"
                         placeholder="Enter your contact number"
                         pattern=".{5,100}"
                         required
                         aria-required="true"
+                        value={formData.contactNumber}
+                        onChange={handleChange}
                       />
                     </div>
                 {/* Message */}
@@ -146,7 +209,8 @@ export default function Contact() {
                     className="input-lg round form-control"
                     style={{ height: 130 }}
                     placeholder="Enter your message"
-                    defaultValue={""}
+                    value={formData.message}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="row">
@@ -182,6 +246,18 @@ export default function Contact() {
                 />
               </form>
               {/* End Contact Form */}
+              <Modal show={showModal} onHide={handleCloseModal} centered>
+                <Modal.Header closeButton style={{ backgroundColor: '#9EBFFF' }}>
+                </Modal.Header>
+                <Modal.Body className="text-center" style={{ backgroundColor: '#9EBFFF' }}>
+                  <p>
+                    <i className="bi bi-envelope"></i>
+                  </p>
+                  <p>Thank you for contacting WeDevelop</p>
+                  <p>We'll contact you soon.</p>
+                </Modal.Body>
+              </Modal>
+              {/* Bootstrap Modal End */}
             </div>
           </div>
         </div>
