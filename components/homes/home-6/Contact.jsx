@@ -69,7 +69,7 @@ export default function Contact() {
         <div className="col-lg-8 col-xl-7 offset-xl-1">
           <div className="position-relative">
             {/* Decorative Image */}
-            <div className="decoration-11 d-none d-xl-block">
+            {/* <div className="decoration-11 d-none d-xl-block">
               <div className="wow fadeInUp">
                 <Image
                   src="/assets/images/demo-fancy/contact-section-image.png"
@@ -78,7 +78,7 @@ export default function Contact() {
                   alt=""
                 />
               </div>
-            </div>
+            </div> */}
             {/* End Decorative Image */}
             <div className="box-shadow round p-4 p-sm-5">
               <h4 className="h3 mb-30">Get in Touch</h4>
@@ -124,6 +124,19 @@ export default function Contact() {
                     {/* End Email */}
                   </div>
                 </div>
+                <div className="form-group">
+                      <label htmlFor="contact">Contact Number</label>
+                      <input
+                        type="number"
+                        name="contact"
+                        id="contact"
+                        className="input-lg round form-control"
+                        placeholder="Enter your contact number"
+                        pattern=".{5,100}"
+                        required
+                        aria-required="true"
+                      />
+                    </div>
                 {/* Message */}
                 <div className="form-group">
                   <label htmlFor="message">Message</label>

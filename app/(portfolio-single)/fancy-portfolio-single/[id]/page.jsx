@@ -8,8 +8,7 @@ import Image from "next/image";
 import { allPortfolios } from "@/data/portfolio";
 export const metadata = {
   title: "Portfolio Details",
-  description:
-    "Resonance &mdash; One & Multi Page React Nextjs Creative Template",
+  description: "Check out the project details for projects done by WeDevelop",
 };
 export default function FancyPortfolioSinglePage({ params }) {
   const portfolioItem =
@@ -84,14 +83,14 @@ export default function FancyPortfolioSinglePage({ params }) {
                           <div className="col-sm-4">
                             <b>Date:</b>
                           </div>
-                          <div className="col-sm-8">October 21st, 2024</div>
+                          <div className="col-sm-8">{portfolioItem.date}</div>
                         </div>
                         <hr className="mb-20" />
                         <div className="row text-gray small">
                           <div className="col-sm-4">
                             <b>Client:</b>
                           </div>
-                          <div className="col-sm-8">Suzuki Jimny Crew</div>
+                          <div className="col-sm-8">{portfolioItem.client}</div>
                         </div>
                         <hr className="mb-20" />
                         <div className="row text-gray small">
@@ -99,8 +98,7 @@ export default function FancyPortfolioSinglePage({ params }) {
                             <b>Services:</b>
                           </div>
                           <div className="col-sm-8">
-                            Front-end Development, Back-end Development, UI/UX
-                            Design
+                            {portfolioItem.services.join(", ")}
                           </div>
                         </div>
                         <hr className="mb-20" />
@@ -109,7 +107,7 @@ export default function FancyPortfolioSinglePage({ params }) {
                             <b>Tech Stack:</b>
                           </div>
                           <div className="col-sm-8">
-                            ReactJs Frontend Framework, PHP Backend Framework, MySQL database
+                            {portfolioItem.techStack.join(", ")}
                           </div>
                         </div>
                         <hr className="mb-20" />
@@ -119,36 +117,11 @@ export default function FancyPortfolioSinglePage({ params }) {
                           </div>
                           <div>
                             <ul>
-                              <li>
-                                The Jimny Crew website provides a seamless and
-                                user-friendly experience, allowing users to
-                                register and log in to access personalized
-                                features.
-                              </li>
-                              <li>
-                                Once logged in, users can update their profiles,
-                                ensuring their details are always up to date.
-                                The site makes it easy to explore and save
-                                events for future reference, book events with a
-                                straightforward process, and receive booking
-                                confirmation emails, which are sent to both the
-                                user and the admin for transparency.
-                              </li>
-                              <li>
-                                In case plans change, users can conveniently
-                                cancel their bookings directly through the
-                                platform.
-                              </li>
-                              <li>
-                                For added security and convenience, the website
-                                also includes a forgot password feature,
-                                enabling users to quickly reset their passwords
-                                and regain access.
-                              </li>
+                              {portfolioItem.features.map((feature, index) => (
+                                <li key={index}>{feature}</li>
+                              ))}
                             </ul>
-                            Every aspect of the platform is designed to
-                              simplify event management and enhance user
-                              engagement.
+                            {portfolioItem.summary}
                           </div>
                         </div>
                         <hr className="mb-20" />
@@ -158,28 +131,20 @@ export default function FancyPortfolioSinglePage({ params }) {
                     <div className="col-lg-8">
                       <div className="mb-n30">
                         {/* Photo Item */}
-                        <div className="mb-30 wow fadeInUp">
-                          <Image
-                            src="/assets/images/demo-fancy/portfolio/project-3-large.png"
-                            className="round"
-                            loading="lazy"
-                            width={1200}
-                            height={800}
-                            alt="Image Description"
-                          />
-                        </div>
-                        {/* End Photo Item */}
-                        {/* Photo Item */}
-                        <div className="mb-30 wow fadeInUp">
-                          <Image
-                            src="/assets/images/demo-fancy/portfolio/project-5-large.png"
-                            className="round"
-                            loading="lazy"
-                            width={1200}
-                            height={800}
-                            alt="Image Description"
-                          />
-                        </div>
+                        {portfolioItem.projectImages.map((src, index) => (
+                          <div className="mb-30 wow fadeInUp" key={index}>
+                            <Image
+                              src={src}
+                              className="round"
+                              loading="lazy"
+                              width={1200}
+                              height={800}
+                              alt={`Image of ${portfolioItem.title} - ${
+                                index + 1
+                              }`}
+                            />
+                          </div>
+                        ))}
                         {/* End Photo Item */}
                       </div>
                     </div>

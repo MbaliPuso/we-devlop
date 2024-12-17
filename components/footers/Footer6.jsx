@@ -17,8 +17,7 @@ export default function Footer6() {
             />
           </div>
           <p>
-            Integer auctor aliquet martor, sed lorem malesuada eros blandit
-            eget. Proin lacinia mortoc id odio vestibulum.
+          Dedicated to creating innovative and user-centric digital solutions.
           </p>
           <div className="clearlinks">
             <strong>Cell: </strong>
