@@ -68,7 +68,7 @@ export default function Footer6() {
       {/* Footer Text */}
       <div className="row text-gray">
         <div className="col-md-4 col-lg-3">
-          <b>© We Develop {new Date().getFullYear()}.</b>
+          <b>© WeDevelop {new Date().getFullYear()}.</b>
         </div>
         <div className="col-md-7 offset-md-1 offset-lg-2 clearfix">
           <b>Based in Johannesburg, South Africa.</b>
