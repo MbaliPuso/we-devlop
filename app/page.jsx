@@ -9,7 +9,7 @@ export const metadata = {
   title:
     "WEDEVLOP",
   description:
-    "Resonance &mdash; One & Multi Page React Nextjs Creative Template",
+    "Digital Marketing Agency based in Johannesburg",
 };
 export default function Home6MainDemoOnepage() {
   return (
